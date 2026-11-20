@@ -1,0 +1,17 @@
+{
+  "name": "techfy",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "TechFy — rastreamento de campanhas: Meta Ads + vendas da Kiwify, com CPA, ROAS e ROI reais",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init": "wrangler d1 execute techfy --remote --file=schema.sql",
+    "db:init:local": "wrangler d1 execute techfy --local --file=schema.sql",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

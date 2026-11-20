@@ -1,0 +1,25 @@
+name = "techfy"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Atualiza as métricas da Meta a cada 30 minutos
+[triggers]
+crons = ["*/30 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "techfy"
+database_id = "COLE_AQUI_O_ID_DO_BANCO"
+
+[vars]
+META_API_VERSION = "v26.0"
+# Fuso das datas (Brasília = -3)
+TZ_OFFSET_HOURS = "-3"
+# Imposto sobre a receita líquida, para o ROI (ex.: 0.06 = 6%). 0 = não descontar
+TAX_RATE = "0"
+
+# Segredos (não ficam neste arquivo). Configure com:
+#   npx wrangler secret put ADMIN_PASSWORD
+#   npx wrangler secret put META_ACCESS_TOKEN
+#   npx wrangler secret put META_AD_ACCOUNT_IDS    (ex.: act_123,act_456)
+#   npx wrangler secret put KIWIFY_WEBHOOK_TOKEN
