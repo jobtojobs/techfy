@@ -9,7 +9,7 @@ crons = ["*/30 * * * *"]
 [[d1_databases]]
 binding = "DB"
 database_name = "techfy"
-database_id = "COLE_AQUI_O_ID_DO_BANCO"
+database_id = "e24de64b-4aa4-420b-bb2e-6d8ed3441228"
 
 [vars]
 META_API_VERSION = "v26.0"
